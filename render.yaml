@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: future-me
+    runtime: docker
+    plan: starter
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: STRIPE_PRICE_ID
+        sync: false
+      - key: APP_URL
+        sync: false
+      - key: IMAGE_MODEL
+        value: gpt-image-2
+      - key: PRICE_EUR
+        value: "5.99"
+      - key: RETENTION_HOURS
+        value: "24"
